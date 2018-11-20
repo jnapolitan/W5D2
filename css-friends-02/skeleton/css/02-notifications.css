@@ -1,0 +1,19 @@
+/* PHASE 2: Notifications */
+.badge {
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+}
+
+.badge ul {
+  display: none;
+}
+
+.badge:hover ul {
+  display: list-item;
+}
