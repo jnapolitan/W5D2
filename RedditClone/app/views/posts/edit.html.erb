@@ -1,0 +1,33 @@
+<div class="styled-box">
+
+<h2>Update Post</h2>
+<form action="<%= post_url(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="patch">
+  
+  <label>Title
+    <input type="text" name="post[title]" value="<%= @post.title %>">
+  </label>
+  <br>
+  <br>
+  <label>URL
+    <input type="text" name="post[url]" value="<%= @post.url %>">
+  </label>
+  <br>
+  <br>
+  <label>Content
+    <textarea name="post[content]" rows="8" cols="80"><%= @post.content %></textarea>
+  </label>
+  <br>
+  <br>
+  Choose subs:
+    <br>
+  <% Sub.all.each do |sub| %>
+    <input type="checkbox" name="post[sub_ids][]" value="<%= sub.id %>"
+      <%= @post.sub_ids.include?(sub.id) ? "checked" : "" %>><%= sub.title %><br>
+  <% end %>
+  
+  <input type="submit" name="" value="Submit">
+  
+</form>
+</div>

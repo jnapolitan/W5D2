@@ -1,5 +1,24 @@
+<div class="body-style-box">
+  
+
 <h2><%= @sub.title %></h2>
 <%= @sub.description %>
 <br>
 <br>
-<a href="<%= subs_url %>">Back To Subs</a>
+
+<% @sub.posts.each do |post| %>
+  Post title: <a href="<%= post_url(post) %>"><%= post.title %></a>
+  <br>
+  <% if post.url %>
+    URL: <a href="http://<%= post.url %>" target="_blank"><%= post.url %></a>
+  <% end %>
+  <br>
+  <br>
+  <%= post.content %>
+  <br>
+  <br>
+<% end %>
+
+<a class="btn btn-outline-primary btn-sm" href="<%= edit_sub_url(@sub) %>">Edit Sub</a>
+<a class="btn btn-outline-primary btn-sm" href="<%= subs_url %>">Back To Subs</a>
+</div>

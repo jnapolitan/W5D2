@@ -1,18 +1,22 @@
-<h2>Create Sub</h2>
 
+
+<div class="styled-box">
+<h2>Create Sub</h2>
 <form action="<%= subs_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   
-  <label>Title
+  <label>Title<br>
     <input type="text" name="sub[title]" value="<%=@sub.title%>">
   </label>
   <br>
   <br>
-  <label>Description
+  <label>Description<br>
     <input type="text" name="sub[description]" value="<%=@sub.description%>">
   </label>
   <br>
   <br>
-  <input type="submit" name="" value="Create Sub">
-  
+  <input type="submit" class="btn btn-primary" value="Create Sub">
+
 </form>
+  </div>
+

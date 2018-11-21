@@ -1,0 +1,31 @@
+.btn-right {
+  float: right;
+  margin: 0px 10px;
+}
+
+body {
+  margin-top: 30px;
+  background-image: url('https://c.wallhere.com/photos/0e/99/Jake_the_Dog_jake_mirror_space_dog_cloudy_space_Jake_puppies_pixel_jake_nebula_dog-1318353.jpg!d');
+  color: white;
+  font-size: 18px;
+}
+
+.styled-box {
+  border: 2px solid white;
+  background-color: red;
+  opacity: 0.8;
+  padding: 10px;
+  width: 25%;
+}
+
+.body-style-box {
+  border: 2px solid white;
+  background-color: red;
+  opacity: 0.7;
+  padding: 10px;
+  width: 80%
+}
+
+.link-button {
+  margin: 0px 10px;
+}

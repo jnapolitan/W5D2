@@ -1,0 +1,30 @@
+<div class="styled-box">
+
+<h2>Create Post</h2>
+
+<form action="<%= posts_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Title
+    <input type="text" name="post[title]" value="">
+  </label>
+  <br>
+  <br>
+  <label>URL
+    <input type="text" name="post[url]" value="">
+  </label>
+  <br>
+  <br>
+  <label>Content
+    <textarea name="post[content]" rows="8" cols="80"></textarea>
+  </label>
+  <br>
+  <br>
+  Choose subs:
+  <% Sub.all.each do |sub| %>
+    <input type="checkbox" name="post[sub_ids][]" value="<%= sub.id %>"><%= sub.title %><br>
+  <% end %>
+  
+  <input type="submit" name="" value="Submit">
+  
+</form>
+</div>

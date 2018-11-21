@@ -1,6 +1,7 @@
 class SubsController < ApplicationController
   
   before_action :require_loggin!
+  before_action :ensure_moderator, only: [:edit, :update]
   
   def index
     @subs = Sub.all
@@ -46,8 +47,8 @@ class SubsController < ApplicationController
     params.require(:sub).permit(:title, :description)
   end
   
-  def is_current_sub?
-    @current_sub
+  def ensure_moderator
+    redirect_to sub_url(params[:id]) unless Sub.find(params[:id]).user_id == current_user.id
   end
   
 end

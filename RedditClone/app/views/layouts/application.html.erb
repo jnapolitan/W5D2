@@ -10,13 +10,27 @@
   </head>
 
   <body>
+    <header class="container">
     <% if current_user %>
       <form action="<%= session_url %>" method="post">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="hidden" name="_method" value="delete">
-        <input type="submit" name="" value="Logout">
+        <input type="submit" class="btn btn-primary btn-right" value="Logout">
       </form>
+    <% else %>
+    <form action="<%= new_session_url %>" method="get">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="submit" class="btn btn-primary btn-right" value="Login">
+    </form>
+    <form action="<%= new_user_url %>" method="get">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="submit" class="btn btn-primary btn-right" value="Sign Up">
+    </form>
     <% end %>
-    <%= yield %>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
