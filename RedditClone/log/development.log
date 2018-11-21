@@ -6165,3 +6165,96 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 72ms (Views: 65.5ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/subs" for 127.0.0.1 at 2018-11-20 17:27:01 -0800
+Processing by SubsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering subs/index.html.erb within layouts/application
+  [1m[36mSub Load (0.9ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  ↳ app/views/subs/index.html.erb:3
+  Rendered subs/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 62ms (Views: 54.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/subs/new" for 127.0.0.1 at 2018-11-20 17:27:01 -0800
+Processing by SubsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering subs/new.html.erb within layouts/application
+  Rendered subs/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 113ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subs/new" for 127.0.0.1 at 2018-11-20 17:27:32 -0800
+Processing by SubsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering subs/new.html.erb within layouts/application
+  Rendered subs/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1723ms (Views: 1708.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/subs/new" for 127.0.0.1 at 2018-11-20 17:27:42 -0800
+Processing by SubsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering subs/new.html.erb within layouts/application
+  Rendered subs/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 75ms (Views: 69.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-20 17:27:45 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mSub Load (0.6ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  ↳ app/views/posts/new.html.erb:23
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Completed 200 OK in 119ms (Views: 65.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-20 17:28:20 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mSub Load (0.8ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  ↳ app/views/posts/new.html.erb:23
+  Rendered posts/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Completed 200 OK in 138ms (Views: 131.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-20 17:28:47 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mSub Load (0.6ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  ↳ app/views/posts/new.html.erb:23
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Completed 200 OK in 161ms (Views: 151.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-20 17:28:58 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mSub Load (0.5ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  ↳ app/views/posts/new.html.erb:23
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Completed 200 OK in 108ms (Views: 97.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-11-20 17:29:15 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mSub Load (0.6ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  ↳ app/views/posts/new.html.erb:23
+  Rendered posts/new.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "eefLDzQKuikfOn77Belo5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 1.0ms)
+
+
