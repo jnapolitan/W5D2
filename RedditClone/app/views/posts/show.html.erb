@@ -1,3 +1,4 @@
+<div class="body-style-box">
 <h2><%= @post.title %></h2>
 <% if @post.url %>
   URL: <a href="http://<%= @post.url %>" target="_blank"><%= @post.url %></a>
@@ -7,7 +8,6 @@
 <%= @post.content %>
 <br>
 <br>
-<a href="<%= edit_post_url(@post) %>">Edit Post</a>
-<br>
-<br>
-<a href="<%= subs_url %>">Back to Subs</a>
+<a class="btn btn-outline-primary btn-sm" href="<%= edit_post_url(@post) %>">Edit Post</a>
+<a class="btn btn-outline-primary btn-sm" href="<%= subs_url %>">Back to Subs</a>
+</div>
